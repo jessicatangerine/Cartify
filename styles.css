@@ -1,0 +1,387 @@
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 0.8em;
+
+}
+
+body {
+    background: #faf7f2;
+    color: #fafafa;
+    font-family: new-spirit, serif;
+    font-weight: 200;
+    font-size: 1.6rem;
+    align-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+span {
+    color: #45423c;
+    text-transform: uppercase;
+}
+
+p {
+    display: flex;
+    margin: 1em;
+}
+
+/* Container */
+
+.container {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+    text-align: center;
+}
+
+/* Header */
+/* new-spirit font from Adobe: https://use.typekit.net/duf0xkb.css */
+h1 {
+    font-family: new-spirit, serif;
+    font-weight: 300;
+    font-style: bold;
+    letter-spacing: 0.1em;
+}
+
+h2 {
+    font-family: new-spirit, serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    color: #3E444E;
+    padding-bottom: 0.5em;
+}
+
+h4 {
+    font-family: new-spirit, serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 0.01em;
+}
+
+h5 {
+    color: #757166;
+    font-family: new-spirit, serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0.01em;
+}
+
+.header {
+    background: #d4d0c7;
+    color: white;
+    padding: 2rem 0;
+}
+
+.header__title {
+    font-size: 4rem;
+    margin-bottom: .4rem;
+}
+
+.header__subtitle {
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-bottom: 1em;
+    color: #69645b;
+}
+
+/* Actions Bar */
+
+.actions {
+    padding: 1rem;
+}
+
+.actions__container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1rem;
+}
+
+.actions__container--spaced {
+    justify-content: space-between;
+}
+
+/* Form Inputs */
+
+.input {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: 1.6rem;
+    margin-bottom: 1rem;
+    padding: .4rem .8rem;
+    font-family: Avenir;
+    letter-spacing: 0em;
+    border-radius: 10px 3px 10px 3px;
+}
+
+.recipe-description {}
+
+textarea {
+    font-family: Avenir, Futura, Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 0.7em;
+}
+
+/* Placeholder code from https://www.w3schools.com/cssref/sel_placeholder.asp */
+textarea::placeholder {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: 1.4rem;
+    padding: .4rem .8rem;
+    font-family: Avenir;
+    color: grey;
+}
+
+/* Checkbox formatting code from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.checkbox {
+    margin-right: 1em;
+    margin-top: 0.5em;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: none;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkbox {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkbox {
+    background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkbox:after {
+    display: block;
+}
+
+.text-element {
+    margin-right: 1em;
+    color: #757166;
+    margin-top: 0.3em;
+}
+
+.remove-element {
+    background: #d46161;
+    border: none;
+    border-bottom: 2px solid #944b4b;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease, color .3s ease;
+    border-radius: 100px;
+}
+
+.remove-element:hover {
+    background: #944b4b;
+}
+
+/* border-radius code from https: //css-tricks.com/css-border-radius-can-do-that/*/
+.button {
+    background: #656f80;
+    border: none;
+    border-bottom: 2px solid #3E444E;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 1rem;
+    transition: background .3s ease, color .3s ease;
+    margin: 1em 0em;
+    border-radius: 10px 3px 10px 3px;
+    font-family: Avenir;
+}
+
+#update-recipe {
+    background: #B98B7F;
+    border-bottom: 2px solid #967269;
+}
+
+#update-recipe:hover {
+    background: #967269;
+}
+
+#add-recipe {
+    background: #B98B7F;
+    border-bottom: 2px solid #967269;
+}
+
+#add-recipe:hover {
+    background: #967269;
+}
+
+#add-ingredient-button {
+    background: #f29f7c;
+    border-bottom: 2px solid #e0835c;
+}
+
+#add-ingredient-button:hover {
+    background: #e0835c;
+}
+
+.button-danger {
+    background: #d46161;
+    border: none;
+    border-bottom: 2px solid #944b4b;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 1rem;
+    transition: background .3s ease, color .3s ease;
+    border-radius: 10px 3px 10px 3px;
+    margin: 2.5em 0em;
+    font-family: Avenir;
+}
+
+.button-danger:hover {
+    background: #944b4b;
+}
+
+.button--add {
+    background: #ebab78;
+    border: none;
+    border-bottom: 2px solid #bf885c;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 1rem;
+    transition: background .3s ease, color .3s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background: #3E444E;
+}
+
+.button--secondary {
+    background: #888888;
+    border-bottom: 2px solid #717171;
+}
+
+.button--secondary:hover {
+    background: #6E6E6E;
+}
+
+.button--text {
+    background: none;
+    border: none;
+    color: #aaa;
+}
+
+.button--text:hover {
+    background: none;
+    color: white;
+}
+
+
+/* Recipe name and steps inputs */
+
+.title-input {
+    border: 1px solid #DEDFE0;
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    padding: .8rem;
+    width: 100%;
+    font-family: Avenir;
+}
+
+.body-input {
+    border: 1px solid #DEDFE0;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    min-height: 15rem;
+    padding: .8rem;
+    width: 100%;
+}
+
+/* Ingredients List */
+
+.list-item {
+    text-decoration: none;
+    color: #fafafa;
+    cursor: pointer;
+    background: #69645b;
+    margin: 1.6rem 0;
+    padding: 1rem 1.6rem;
+    display: block;
+    transition: background .3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 3px 10px 3px;
+}
+
+.list-item__container {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 300;
+    align-items: baseline;
+}
+
+.list-item__container > *:first-child {
+    margin-right: .8rem;
+}
+
+.list-item:hover {
+    background: #45423c;
+}
+
+.list-item__title {
+    font-size: 1.8rem;
+    margin-bottom: .4rem
+}
+
+.list-item__subtitle {
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    font-family: Avenir;
+}
+
+.list-title {
+    margin: 3.2rem 0 1.6rem;
+}
+
+.empty-message {
+    margin: 3.2rem 0;
+}
